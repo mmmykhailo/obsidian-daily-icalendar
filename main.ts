@@ -2,6 +2,7 @@ import { Plugin, request } from "obsidian";
 import { readFromCache, writeToCache } from "./utils/cache";
 import { filterMatchingEvents, parseIcs } from "utils/ics";
 import { buildError, buildListOrPlaceholder, buildSkeleton } from "utils/html";
+import md5Hex from "md5-hex";
 
 export default class IcalendarPlugin extends Plugin {
 	async onload() {
@@ -19,7 +20,7 @@ export default class IcalendarPlugin extends Plugin {
 					return;
 				}
 
-				const cached = readFromCache(targetDateString);
+				const cached = readFromCache(md5Hex(source));
 
 				if (cached === null) {
 					el.replaceChildren(buildSkeleton());
@@ -39,7 +40,7 @@ export default class IcalendarPlugin extends Plugin {
 							targetDateString
 						).sort((a, b) => a.start.getTime() - b.start.getTime());
 
-						writeToCache(targetDateString, filteredEvents);
+						writeToCache(md5Hex(source), filteredEvents);
 
 						const list = buildListOrPlaceholder(filteredEvents);
 						el.replaceChildren(list);
