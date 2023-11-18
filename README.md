@@ -6,7 +6,7 @@ It offers a method for retrieving a list of events on a specified date. By takin
 
 ## Manually installing the plugin
 
-- Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/your-plugin-id/`.
+- Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/obsidian-daily-icalendar/`.
 
 ## Usage example
 ~~~markdown
@@ -19,3 +19,10 @@ https://calendar.google.com/calendar/ical/.../basic.ics
 will return the events or a label telling that no events are planned.
 ![No events screenshot](screenshots/no-events.png)
 ![Events screenshot](screenshots/events.png)
+
+## Acknowledgements
+Inspired by [obsidian-ics](https://github.com/muness/obsidian-ics).
+
+If you want more contol over the plugin you may consider using obsidian-ics.
+
+Daily ICalendar plugin was made with caching and narrow usecase in mind.
