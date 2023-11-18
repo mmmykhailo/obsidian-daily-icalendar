@@ -1,8 +1,19 @@
-/*
+.icalendar-skeleton {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	bottom: 1px;
+	width: 300px;
+	height: 16px;
+	animation: icalendar-skeleton 1s linear infinite alternate;
+	border-radius: 5px;
+}
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
-
-If your plugin does not need CSS, delete this file.
-
-*/
+@keyframes icalendar-skeleton {
+	0% {
+		background-color: rgba(200, 202, 218, 1);
+	}
+	100% {
+		background-color: rgba(200, 202, 218, 0.5);
+	}
+}
