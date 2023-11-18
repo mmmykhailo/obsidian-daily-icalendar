@@ -12,8 +12,6 @@
 	"author": "mmmykhailo",
 	"license": "MIT",
 	"devDependencies": {
-		"@types/ical": "^0.8.3",
-		"@types/node": "^16.11.6",
 		"@typescript-eslint/eslint-plugin": "5.29.0",
 		"@typescript-eslint/parser": "5.29.0",
 		"builtin-modules": "3.3.0",
@@ -23,15 +21,7 @@
 		"typescript": "4.7.4"
 	},
 	"dependencies": {
-		"ical": "^0.8.0",
-		"ical-js-parser": "^0.7.4",
-		"ical.js": "^1.5.0",
-		"ical2json": "^3.2.0",
-		"icalts": "^0.0.2",
-		"icsparser.js": "^0.0.1",
-		"ikalendar": "^1.5.0",
 		"moment-timezone": "^0.5.43",
-		"node-ical": "^0.16.1",
-		"ts-ics": "^1.2.0"
+		"node-ical": "^0.16.1"
 	}
 }
