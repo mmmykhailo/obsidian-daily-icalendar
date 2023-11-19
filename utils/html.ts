@@ -63,5 +63,7 @@ export const buildSkeleton = () => {
 };
 
 export const buildError = () => {
-	return createDiv({ text: "You should provide a valid date on first line" });
+	return createDiv({
+		text: "You should provide a valid date in the first line",
+	});
 };
